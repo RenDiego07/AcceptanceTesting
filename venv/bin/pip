@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/alex_vizuete/Documents/Ingeniería en ciencias computacionales/I PAO - 2025/Ingeniería de Software II/Workshops/AcceptanceTesting/venv/bin/python3" "$0" "$@"
-' '''
+#!/Users/dfflores/Desktop/Semestres/Semestre7/Ing_Software2/workshopAcceptanceTesting/AcceptanceTesting/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys

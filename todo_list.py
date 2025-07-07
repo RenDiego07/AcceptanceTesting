@@ -1,5 +1,3 @@
-# todo_list.py
-
 class Task:
     def __init__(self, title, description, priority, due_date):
         self.title = title
@@ -49,7 +47,7 @@ class ToDoList:
 
     def remove_task(self, index):
         if 0 <= index < len(self.tasks):
-            self.tasks.remove(index)
+            del self.tasks[index]
             print("Task removed")
         else:
             print("Invalid index")

@@ -38,16 +38,13 @@ Feature: To-Do List Manager
         When the user updates the due date of task 0 to "Monday"
         Then the task "Finish report" should have due date "Monday"
 
-
     Scenario: Remove a task from the to-do list
     Given the to-do list contains tasks:
-        | Task           |
-        | Buy groceries  |
-        | Pay bills      |
+        | Task          |
+        | Buy groceries |
+        | Pay bills     |
     When the user removes task at index 0
     Then the to-do list should contain:
-        | Buy groceries      |
+        | Task      |
         | Pay bills |
-
-
 
