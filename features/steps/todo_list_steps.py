@@ -1,6 +1,8 @@
 from behave import *
 from todo_list import ToDoList  # importa tu clase real
 
+to_do_list =[] 
+
 @given('a new to-do list')
 def step_impl(context):
     context.todo = ToDoList()
@@ -11,6 +13,12 @@ def step_impl(context, title, desc, priority, due):
 
 @then('the task list should contain {count:d} task')
 @then('the task list should contain {count:d} tasks')
+
 def step_impl(context, count):
     assert len(context.todo.tasks) == count
 
+
+    
+
+# Scenario : Add a new task
+@given('')
