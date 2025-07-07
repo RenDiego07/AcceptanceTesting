@@ -11,6 +11,9 @@ class Task:
     def mark_completed(self):
         self.completed = True
 
+    def set_dueDate(self, new_date):
+        self.due_date = new_date
+
     def __str__(self):
         status = "✓" if self.completed else "✗"
         return f"{self.title} [{status}]\n  Description: {self.description}\n  Priority: {self.priority}\n  Due: {self.due_date}"
@@ -36,6 +39,20 @@ class ToDoList:
             print("Task marked as completed.\n")
         else:
             print("Invalid index.\n")
+
+    def update_dueDate(self, index, new_date):
+        if 0 <= index < len(self.tasks):
+            self.tasks[index].set_dueDate(new_date)
+            print(f"New due date set to: {new_date}")
+        else:
+            print("Invalid index")
+
+    def remove_task(self, index):
+        if 0 <= index < len(self.tasks):
+            self.tasks.remove(index)
+            print("Task removed")
+        else:
+            print("Invalid index")
 
     def clear_tasks(self):
         self.tasks.clear()
